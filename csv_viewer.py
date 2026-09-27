@@ -3,5 +3,5 @@ import pandas as pd
 
 input_csv = st.file_uploader("Upload", type="csv")
 
-st.write(input_csv)
-st.write(pd.read_csv(input_csv.name))
+if input_csv is not None:
+  st.write(pd.read_csv(input_csv))
